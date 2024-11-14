@@ -1,0 +1,62 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f7e9e9;
+}
+
+h1 {
+    color: #ff69b4;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(8, 60px);
+    grid-template-rows: repeat(8, 60px);
+    gap: 5px;
+    margin-top: 20px;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 10px;
+    color: pink;
+}
+
+.candy {
+    width: 60px;
+    height: 60px;
+    border-radius: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: skyblue; /* Background color for grid boxes */
+}
+
+/* Styles for regular candies */
+.red { background-image: url('red_candy.png'); }
+.yellow { background-image: url('yellows_candy.png'); }
+.green { background-image: url('green_candy.png'); }
+.blue { background-image: url('blue_candy.png'); }
+.purple { background-image: url('purple_candy.png'); }
+.orange { background-image: url('oranges_candy.png'); }
+
+/* Style for blank tiles */
+.blank { background: none; }
+
+/* Style for the bomb candy */
+.bomb {
+    background-color: black;
+    border: 3px solid yellow;
+    background-image: url('bomb_candy.png'); /* Replace with your bomb image if you have one */
+    background-size: 50%; /* Adjust size if needed */
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%; /* Make bomb candy circular */
+    box-shadow: 0 0 10px yellow; /* Glow effect to make it stand out */
+}
